@@ -1,0 +1,23 @@
+Name: Morris Anthony
+OOP244 - MS6 reflection
+Date: 08/05/2020
+
+MS6
+
+I learnt a lot of new things doing the project. Milestone 2 and Milestone 6 were the most challenging as they involved concepts that were complex.
+In MS2 i struggled with finding the leak in memory with the multiple files and objects and the inter-relation between each function and class.
+In milestone 6, the biggest challenge was the load function, applying the logic stated in the assignment pdf was a bit tough due to the wording, thus i 
+used my own logic. The main issue was loading the data with the various changes that happen to it. Data is added and deleted and the file needs to be able
+to load in any condition, even with zero spots. The load function led me to some bugs i had in the other files. My write function in the menu did not
+use the ostream object recieved but was using the standard cout, this led to errors in writing to the file as cout only writes to the console.
+A similar error happened with read where i was using the cin object instead of the istream object recieved as an argument.  The second challenge was the
+save data function, the file was not opening due to bugs in the way i was checking if the file was open or not. There were issues with my return vehicle 
+function as well, when returning vehicle objects two times in a row, it would for some reason remove the last parked vehicle as well. I realised i was looping
+through only the parked vehicles which was causing the issues, i changed the same to loop through the entire spots array and that solved the proble. I replaced is_open with the stream status
+checked good which resolved the bug. The last major issue was the conditional jumps, i was looping through the number of parked vehicles instead of the
+number of posts, which caused the conditional jumps. Additionally, setting only the first element of the parking spots array to null was causing additional
+jumps, which i tackled by looping through the entire spots arary of 100 spots. Other than all of this there were no major issues aside from minor formating
+issues. I simplified a few functions for easier debugging, i was using the algorithm library to span throgh the array to change values to upper case or check
+if the values were integers, changed the same to a normal for loop for simplicity. 
+
+In conlcusion, learnt to apply of the concepts learned, from virtual functions to derived classes, file stream, stream objects, function helpers. 
